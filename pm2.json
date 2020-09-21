@@ -1,0 +1,20 @@
+{
+    "apps": [
+        {
+            "name": "HTTP-API",
+            "script": "http.js"
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "ubuntu",
+            "host": [
+                "34.202.214.255"
+            ],
+            "ref": "origin/master",
+            "repo": "git@github.com:Username/repository.git",
+            "path": "/home/ubuntu/apps/pm2test",
+            "post-deploy": "npm install;"
+        },
+    }
+}
